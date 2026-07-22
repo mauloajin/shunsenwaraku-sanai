@@ -13,6 +13,7 @@ export const metadata = {
     url: '/', siteName: '旬鮮和楽 さな井', locale: 'ja_JP', type: 'website'
   },
   twitter: { card: 'summary', title: '旬鮮和楽 さな井｜大阪・東心斎橋の日本料理', description: '会席料理、営業時間、予約、アクセスのご案内。' },
+  verification: { google: 'ayHXvvh7MAYyEd0yabm5xYrI98qeN_1bfcLkvUPkbrM' },
   robots: { index: true, follow: true }
 };
 
