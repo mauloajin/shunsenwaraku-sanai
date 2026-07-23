@@ -7,9 +7,10 @@ const links = {
   gurunavi: 'https://syunsenwaraku-sanai.gorp.jp/',
   facebook: 'https://www.facebook.com/osaka.minami.sanai.official/'
 };
+const officialName = '旬鮮和楽 さな井｜難波・心斎橋の和食・割烹';
 
 const facts = [
-  ['店名', '旬鮮和楽 さな井（しゅんせんわらく さない）'],
+  ['店名', `${officialName}（しゅんせんわらく さない）`],
   ['業態', '日本料理・割烹・会席料理'],
   ['住所', '〒542-0083 大阪府大阪市中央区東心斎橋2-2-11 日宝セブンセンタービル1F'],
   ['電話番号', '06-6214-0371'],
@@ -23,7 +24,7 @@ const facts = [
 ];
 
 const faqs = [
-  ['旬鮮和楽 さな井はどこにありますか？', '大阪府大阪市中央区東心斎橋2-2-11、日宝セブンセンタービル1Fにあります。日本橋駅と長堀橋駅から徒歩4分、なんば駅から徒歩10分です。'],
+  [`${officialName}はどこにありますか？`, '大阪府大阪市中央区東心斎橋2-2-11、日宝セブンセンタービル1Fにあります。日本橋駅と長堀橋駅から徒歩4分、なんば駅から徒歩10分です。'],
   ['営業時間と定休日は？', '営業時間は18:00～22:00、料理のラストオーダーは20:30です。定休日は月曜日で、不定休もあります。直近の営業日は公式Instagramでもご確認ください。'],
   ['予約はどのようにできますか？', '公式WEB予約ページ、または電話（06-6214-0371）から予約できます。おまかせ会席は前日までの予約が案内されており、当日は電話でお問い合わせください。'],
   ['どのような料理を楽しめますか？', '近畿圏を中心とした旬の食材を用い、五味・五色・五感・五法を大切に組み立てる日本料理の会席です。暦や祭事、食材の走り・盛り・名残を献立と器で表現しています。'],
@@ -38,6 +39,7 @@ const faqs = [
 const areasJp = ['東心斎橋','日本橋','近鉄日本橋','長堀橋','なんば','難波','心斎橋','道頓堀','宗右衛門町','島之内','千日前','黒門市場','ミナミ','大阪市中央区','大阪市','大阪'];
 const intentsJp = ['日本料理','割烹','会席料理','懐石料理','和食','ディナー','おまかせ会席','旬の料理','季節料理','日本酒','和牛料理','魚料理','予約','WEB予約'];
 const jpKeywords = [
+  officialName,
   '旬鮮和楽 さな井','旬鮮和楽さな井','旬鮮和樂 さな井','しゅんせんわらく さない','さな井 大阪','さな井 東心斎橋','さな井 日本橋','さな井 長堀橋','Shunsenwaraku Sanai','旬鮮和楽 さな井 予約','旬鮮和楽 さな井 電話','旬鮮和楽 さな井 営業時間','旬鮮和楽 さな井 定休日','旬鮮和楽 さな井 住所','旬鮮和楽 さな井 アクセス','旬鮮和楽 さな井 メニュー','旬鮮和楽 さな井 会席','旬鮮和楽 さな井 コース','旬鮮和楽 さな井 Instagram','旬鮮和楽 さな井 Googleマップ',
   ...areasJp.flatMap(area => intentsJp.map(intent => `${area} ${intent}`))
 ].slice(0, 220);
@@ -52,7 +54,7 @@ const enKeywords = [
 const restaurantLd = {
   '@context': 'https://schema.org', '@type': 'Restaurant',
   '@id': 'https://shunsenwaraku-sanai.vercel.app/#restaurant',
-  name: '旬鮮和楽 さな井', alternateName: ['しゅんせんわらく さない','Shunsenwaraku Sanai'],
+  name: officialName, alternateName: ['旬鮮和楽 さな井','しゅんせんわらく さない','Shunsenwaraku Sanai'],
   description: '大阪市中央区東心斎橋で、旬の近畿食材を生かした日本料理を会席スタイルで提供する割烹。',
   url: 'https://shunsenwaraku-sanai.vercel.app/', telephone: '06-6214-0371', priceRange: '¥¥¥',
   servesCuisine: ['日本料理','割烹','会席料理','Japanese','Kaiseki'],
